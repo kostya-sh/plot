@@ -228,7 +228,7 @@ func printActionDiff(got, want []recorder.Action) string {
 		}
 	}
 	if len(want) > len(got) {
-		fmt.Fprintf(&buf, "line %d:\n\tgot: %s\n\twant is empty", len(got), want[len(got)].Call())
+		fmt.Fprintf(&buf, "line %d:\n\twant: %s\n\tgot is empty", len(got), want[len(got)].Call())
 	}
 	return buf.String()
 }
